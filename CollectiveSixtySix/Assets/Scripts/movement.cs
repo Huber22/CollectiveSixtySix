@@ -37,9 +37,14 @@ public class movement : MonoBehaviour
         }
         else if (characterController.isGrounded && SceneManager.GetActiveScene().name == "Level2")
         {
-            if (Input.GetButton("F"))
-            {
 
+                moveDirection = new Vector3(Input.GetAxis("Level2"), 0.0f, 0f);
+                moveDirection *= speed;
+            
+
+            if (Input.GetKeyDown("f"))
+            {
+                moveDirection.y = jumpSpeed;
             }
         }
 
