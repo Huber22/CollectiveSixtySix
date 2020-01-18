@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class movement : MonoBehaviour
 {
@@ -14,13 +15,17 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            
+        }
         characterController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (characterController.isGrounded)
+        if (characterController.isGrounded && SceneManager.GetActiveScene().name != "Level2")
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0f);
             moveDirection *= speed;
@@ -28,6 +33,13 @@ public class movement : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 moveDirection.y = jumpSpeed;
+            }
+        }
+        else if (characterController.isGrounded && SceneManager.GetActiveScene().name == "Level2")
+        {
+            if (Input.GetButton("F"))
+            {
+
             }
         }
 
