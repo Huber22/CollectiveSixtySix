@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dbd424eb58a36d840b93a98261c691ce
+guid: 21651bc36368c434ba3d10a3d40dc386
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
@@ -15,7 +15,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'RightUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -72,8 +73,269 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Armature
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Upper Leg L..001
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lower Leg L..001
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: 'Neck '
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: 'Shoulder L. '
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder L. .001
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Upper Arm L.
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Upper Arm L..001
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lower Arm L.
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lower Arm L..001
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: 66game char 1(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: 66game char 1(Clone)
+      position: {x: -0, y: 1.3043497, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Hips
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Spine
+      parentName: Hips
+      position: {x: -0, y: 0.0061482466, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chest
+      parentName: Spine
+      position: {x: -0, y: 0.010025114, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 'Neck '
+      parentName: Chest
+      position: {x: -0, y: 0.006595468, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: 'Neck '
+      position: {x: -0, y: 0.0021633147, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_end
+      parentName: Head
+      position: {x: -0, y: 0.015048642, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 'Shoulder L. '
+      parentName: Chest
+      position: {x: -0.0037814018, y: 0.0055841636, z: -1.4012676e-10}
+      rotation: {x: -0.000000029802319, y: -0.000000059604638, z: 0.79576164, w: 0.60560995}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: Upper Arm L.
+      parentName: 'Shoulder L. '
+      position: {x: 0.000000002235174, y: 0.0031021112, z: 8.8817837e-17}
+      rotation: {x: -0.07836323, y: -0.70275104, z: 0.078362934, w: -0.7027512}
+      scale: {x: 1.0000012, y: 1.0000007, z: 1.0000004}
+    - name: Lower Arm L.
+      parentName: Upper Arm L.
+      position: {x: -0, y: 0.0042596254, z: -0.0000000011920929}
+      rotation: {x: -0.01021085, y: 0.00000005960465, z: -0.00000015273692, w: 0.9999479}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
+    - name: Lower Arm L._end
+      parentName: Lower Arm L.
+      position: {x: -0, y: 0.011013529, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder L. .001
+      parentName: Chest
+      position: {x: 0.0038039514, y: 0.0055841636, z: -1.4012676e-10}
+      rotation: {x: 0.00000026822087, y: 0.00000020861623, z: -0.79530025, w: 0.60621566}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1}
+    - name: Upper Arm L..001
+      parentName: Shoulder L. .001
+      position: {x: 7.450584e-10, y: 0.0031193, z: 1.1368684e-15}
+      rotation: {x: -0.07777559, y: 0.7028163, z: 0.07777562, w: 0.70281667}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Lower Arm L..001
+      parentName: Upper Arm L..001
+      position: {x: -8.5265126e-16, y: 0.0042721597, z: -0.0000000011920925}
+      rotation: {x: 0.010115503, y: 0.0000001490116, z: 0.00000007078051, w: 0.99994886}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000006}
+    - name: Lower Arm L..001_end
+      parentName: Lower Arm L..001
+      position: {x: -0, y: 0.011025769, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Upper Leg L.
+      parentName: Hips
+      position: {x: -0.003737432, y: 0.0010037816, z: -8.4094776e-10}
+      rotation: {x: 0.006075225, y: 0.083916545, z: 0.9938526, w: 0.07195846}
+      scale: {x: 0.9999939, y: 0.9999997, z: 0.9999931}
+    - name: Lower Leg L.
+      parentName: Upper Leg L.
+      position: {x: 3.4080586e-10, y: 0.0071212654, z: 6.286427e-11}
+      rotation: {x: 0.07221249, y: -0.98216057, z: 0.17362545, w: -0.00047214498}
+      scale: {x: 0.9999985, y: 1.000003, z: 0.9999996}
+    - name: Lower Leg L._end
+      parentName: Lower Leg L.
+      position: {x: -0, y: 0.00661617, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Upper Leg L..001
+      parentName: Hips
+      position: {x: 0.00375972, y: 0.0010037816, z: -8.4094776e-10}
+      rotation: {x: 0.018209554, y: 0.08564978, z: 0.9936748, w: -0.07030585}
+      scale: {x: 0.9999997, y: 1.000001, z: 0.9999991}
+    - name: Lower Leg L..001
+      parentName: Upper Leg L..001
+      position: {x: -1.8626451e-11, y: 0.007122124, z: 7.4505804e-11}
+      rotation: {x: -0.06836658, y: -0.98182636, z: 0.17533562, w: 0.024505498}
+      scale: {x: 0.99999964, y: 1.0000013, z: 1.0000011}
+    - name: Lower Leg L..001_end
+      parentName: Lower Leg L..001
+      position: {x: -0, y: 0.00661617, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK L.
+      parentName: Armature
+      position: {x: -0.004748737, y: 0.0000000036153565, z: -0.012786946}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.99999934, z: 0.99999934}
+    - name: IK L._end
+      parentName: IK L.
+      position: {x: -0, y: 0.0048806462, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pull target L.
+      parentName: Armature
+      position: {x: -0.0047078994, y: -0.0050650937, z: -0.0059630345}
+      rotation: {x: 0.9999897, y: -0.0000000653854, z: -0.000014337023, w: 0.004540146}
+      scale: {x: 1, y: 1, z: 1.0022409}
+    - name: Pull target L._end
+      parentName: Pull target L.
+      position: {x: -0, y: 0.0069035427, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK L..001
+      parentName: Armature
+      position: {x: 0.004777055, y: 0.0000000036153565, z: -0.012450969}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.99999934, z: 0.99999934}
+    - name: IK L..001_end
+      parentName: IK L..001
+      position: {x: -0, y: 0.0048806462, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pull target L..001
+      parentName: Armature
+      position: {x: 0.0047359746, y: -0.0050650937, z: -0.0059630345}
+      rotation: {x: 0.9999897, y: -0.00000008009739, z: -0.000017562854, w: 0.004540146}
+      scale: {x: 1, y: 1, z: 1.0022409}
+    - name: Pull target L..001_end
+      parentName: Pull target L..001
+      position: {x: -0, y: 0.0069035427, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube
+      parentName: 66game char 1(Clone)
+      position: {x: -0, y: 2.0090146, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Lamp
+      parentName: 66game char 1(Clone)
+      position: {x: -4.0762453, y: 5.903862, z: -1.005454}
+      rotation: {x: 0.52327543, y: -0.34203398, z: 0.72694236, w: 0.28416628}
+      scale: {x: 100.00001, y: 100, z: 100}
+    - name: Camera
+      parentName: 66game char 1(Clone)
+      position: {x: -7.4811316, y: 5.343665, z: 6.5076394}
+      rotation: {x: 0.0906284, y: 0.8937962, z: -0.20997299, w: 0.38577998}
+      scale: {x: 100, y: 100.00001, z: 99.99999}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
