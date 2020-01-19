@@ -5191,6 +5191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 2377822292843032881}
+  startpoint: {fileID: 6472466375808138246, guid: e12c4dc796c579e439852e41155f8a17,
+    type: 3}
 --- !u!1 &1703117955645903941
 GameObject:
   m_ObjectHideFlags: 0
