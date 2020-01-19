@@ -14,7 +14,7 @@ public class mainMenu : MonoBehaviour
     void Start()
     {
         Menu();
-        
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -67,6 +67,7 @@ public class mainMenu : MonoBehaviour
     }
     public void Credits()
     {
+        SceneManager.LoadScene("Credits");
         Debug.Log("Play Credits");
     }
     public void Menu()

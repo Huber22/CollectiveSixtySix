@@ -5,16 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public GameObject gun;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gun.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.Instance.HasGun == true&& SceneManager.GetActiveScene().name=="Level5")
+        {
+            gun.SetActive(true);
+        }
+        if(SceneManager.GetActiveScene().name != "Level5")
+        {
+            GameManager.Instance.HasGun = false;
+            gun.SetActive(false);
+        }
     }
     void OnControllerColliderHit(ControllerColliderHit hit)
     {

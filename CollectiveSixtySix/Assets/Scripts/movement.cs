@@ -21,34 +21,37 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (characterController.isGrounded && SceneManager.GetActiveScene().name != "Level2")
+        if (GameManager.Instance.PlayerCanMove == true)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0f);
-            moveDirection *= speed;
-
-            if (Input.GetButton("Jump")&& SceneManager.GetActiveScene().name != "Level4")
+            if (characterController.isGrounded && SceneManager.GetActiveScene().name != "Level2")
             {
-                moveDirection.y = jumpSpeed;
+                moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0f);
+                moveDirection *= speed;
+
+                if (Input.GetButton("Jump") && SceneManager.GetActiveScene().name != "Level4")
+                {
+                    moveDirection.y = jumpSpeed;
+                }
             }
-        }
-        else if (characterController.isGrounded && SceneManager.GetActiveScene().name == "Level2")
-        {
+            else if (characterController.isGrounded && SceneManager.GetActiveScene().name == "Level2")
+            {
 
                 moveDirection = new Vector3(Input.GetAxis("Level2"), 0.0f, 0f);
                 moveDirection *= speed;
-            
 
-            if (Input.GetKeyDown("f"))
-            {
-                moveDirection.y = jumpSpeed;
+
+                if (Input.GetKeyDown("f"))
+                {
+                    moveDirection.y = jumpSpeed;
+                }
             }
+
+
+            moveDirection.y -= gravity * Time.deltaTime;
+            //if less than -1 in y play fall anim
+            // Move the controller
+            characterController.Move(moveDirection * Time.deltaTime);
         }
-
-
-        moveDirection.y -= gravity * Time.deltaTime;
-
-        // Move the controller
-        characterController.Move(moveDirection * Time.deltaTime);
 
     }
 }
