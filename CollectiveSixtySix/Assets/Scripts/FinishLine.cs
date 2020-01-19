@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class FinishLine : MonoBehaviour
             else if (Level == 4)
             {
                 Debug.Log("credits");
+                SceneManager.LoadScene("Credits");
             }
         }
     }

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public bool Level1Complete;//start gamestate 2
     public bool Level2Complete;//start gamestate 3
     public bool Level5Complete;//start gamestate 4 maybe
+    public bool Level4Complete;
 
     public bool levelSelectOption;
 
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
         Level1Complete = false;
         Level2Complete = false;
         Level5Complete = false;
+        Level4Complete = false;
     }
 
     // Update is called once per frame
@@ -44,4 +46,5 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
 }

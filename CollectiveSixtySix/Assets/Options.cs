@@ -18,7 +18,7 @@ public class Options : MonoBehaviour
         GameMenu.SetActive(false);
         FeelMenu.SetActive(false);
         playmenu.SetActive(false);
-        regularOptions.SetActive(true);
+        regularOptions.SetActive(false);
     }
 
     // Update is called once per frame
@@ -87,6 +87,7 @@ public class Options : MonoBehaviour
         }
         else if (GameManager.Instance.levelSelectOption == false)
         {
+            Debug.Log("Level Select button on");
             GameManager.Instance.levelSelectOption = true;
         }
     }

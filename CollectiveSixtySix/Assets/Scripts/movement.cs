@@ -26,7 +26,7 @@ public class movement : MonoBehaviour
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0f);
             moveDirection *= speed;
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump")&& SceneManager.GetActiveScene().name != "Level4")
             {
                 moveDirection.y = jumpSpeed;
             }
@@ -43,6 +43,7 @@ public class movement : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
         }
+
 
         moveDirection.y -= gravity * Time.deltaTime;
 

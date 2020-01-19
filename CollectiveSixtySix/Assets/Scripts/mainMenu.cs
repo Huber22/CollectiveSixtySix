@@ -14,19 +14,7 @@ public class mainMenu : MonoBehaviour
     void Start()
     {
         Menu();
-        StartText.text = "Start";
-        if (GameManager.Instance.Level1Complete == true)
-        {
-            StartText.text = "Continue";
-        }
-        if (GameManager.Instance.Level2Complete == true && GameManager.Instance.levelSelectOption == false)
-        {
-            levelSelectButton.SetActive(false);
-        }
-        else if(GameManager.Instance.levelSelectOption == true)
-        {
-            levelSelectButton.SetActive(true);
-        }
+        
     }
 
     // Update is called once per frame
@@ -86,5 +74,18 @@ public class mainMenu : MonoBehaviour
         MenuObject.SetActive(true);
         levelSelect.SetActive(false);
         regularOptions.SetActive(false);
+        StartText.text = "Start";
+        if (GameManager.Instance.Level1Complete == true)
+        {
+            StartText.text = "Continue";
+        }
+        if (GameManager.Instance.Level2Complete == true && GameManager.Instance.levelSelectOption == false)
+        {
+            levelSelectButton.SetActive(false);
+        }
+        else if (GameManager.Instance.levelSelectOption == true)
+        {
+            levelSelectButton.SetActive(true);
+        }
     }
 }
