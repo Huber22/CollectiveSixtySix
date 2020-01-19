@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public GameObject gun;
     public GameObject startpoint;
     Transform point;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -7,9 +7,15 @@ public class movement : MonoBehaviour
 {
     CharacterController characterController;
 
+    private Vector3 lastPosition = new Vector3(0, 0, 0);
+
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+    public Animator anim;
+
+    public float jumptime=3f;
+    public float timetofall;
 
     private Vector3 moveDirection = Vector3.zero;
     // Start is called before the first frame update
@@ -31,6 +37,8 @@ public class movement : MonoBehaviour
                 if (Input.GetButton("Jump") && SceneManager.GetActiveScene().name != "Level4")
                 {
                     moveDirection.y = jumpSpeed;
+                    anim.SetTrigger("Jumping");
+                    timetofall = Time.time + jumptime;
                 }
             }
             else if (characterController.isGrounded && SceneManager.GetActiveScene().name == "Level2")
@@ -43,6 +51,8 @@ public class movement : MonoBehaviour
                 if (Input.GetKeyDown("f"))
                 {
                     moveDirection.y = jumpSpeed;
+                    anim.SetTrigger("Jumping");
+                    timetofall = Time.time + jumptime;
                 }
             }
 
@@ -51,7 +61,25 @@ public class movement : MonoBehaviour
             //if less than -1 in y play fall anim
             // Move the controller
             characterController.Move(moveDirection * Time.deltaTime);
+            
         }
+        if (lastPosition != gameObject.transform.position && characterController.isGrounded == true) 
+        {
+            anim.SetBool("Moving", true);
+            anim.SetBool("Fall", false);
+        }
+        else if(lastPosition != gameObject.transform.position && characterController.isGrounded == false&& Time.time>timetofall)
+        {
+            anim.SetBool("Moving", false);
+            anim.SetBool("Fall", true);
+        }
+        else if(lastPosition == gameObject.transform.position)
+        {
+            anim.SetBool("Moving", false);
+            anim.SetBool("Fall", false);
+        }
+        lastPosition = gameObject.transform.position;
+        
 
     }
 }
