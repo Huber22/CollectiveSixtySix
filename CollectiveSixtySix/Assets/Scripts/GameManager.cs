@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public bool Level2Complete;//start gamestate 3
     public bool Level5Complete;//start gamestate 4 maybe
 
+    public bool levelSelectOption;
+
     private static GameManager instance = null;
     public static GameManager Instance
     {
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        levelSelectOption = false;
         Level1Complete = false;
         Level2Complete = false;
         Level5Complete = false;

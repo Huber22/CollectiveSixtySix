@@ -15,10 +15,6 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Level2")
-        {
-            
-        }
         characterController = GetComponent<CharacterController>();
     }
 
