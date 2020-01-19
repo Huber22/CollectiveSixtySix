@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         Level2Complete = false;
         Level5Complete = false;
         Level4Complete = false;
-        PlayerCanMove = true;
+        
     }
 
     // Update is called once per frame

@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public GameObject gun;
+    public GameObject startpoint;
+    Transform point;
     // Start is called before the first frame update
     void Start()
     {
+         point = Instantiate(startpoint.transform,this.transform.position,Quaternion.identity);
         gun.SetActive(false);
     }
 
@@ -36,6 +39,7 @@ public class Player : MonoBehaviour
         }
     }
     void Die() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        this.transform.position = point.position;
 }
  }
